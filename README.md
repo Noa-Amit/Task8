@@ -3,19 +3,8 @@
 # מטלה 8 סעיף ה
 
 לקחתי את הפרוייקט מהשיעור ועשיתי בו מספר שינויים:
-1. הוספתי פונקציה שבודקת האם השחקן לחץ על איקס ואם כן, על איזה לחצן נוסף הוא לחץ (ימינה, שמאלה,למעלמה,למטה) כך שהפונקציה מחזירה את המיקום החדש-
+1. הוספתי פונקציה ל KeyboardMover שבודקת האם השחקן לחץ על X ואם כן, על איזה לחצן נוסף הוא לחץ (ימינה, שמאלה,למעלמה,למטה) כך שהפונקציה מחזירה את המיקום החדש-
 https://github.com/Noa-Amit/Task8/blob/master/Assets/Scripts/2-player/KeyboardMover.cs
-2. הוספתי פונקציה שמחכה שניה ואז משנה את האריח של ה mountains לאריח של grass.
-3. הוספתי ל tilemap את הסקריפט החדש שכתבתי NewTilemapCaveGenerator
-
-הסקריפטים שכתבתי:
-
-1. NewMapTrigger- כשהשחקן נוגע בטריגר המשחק מתחיל מחדש, כלומר המפה משתנה והשחקן חוזר לנקודת ההתחלה
-https://github.com/Noa-Amit/game-task8-tilemap-pathfinding/blob/main/Assets/Scripts/randomMap/newMapTrigger.cs
-
-2. NewTilemapCaveGeneration- יוצר אוביקט מערה שמתאחלת מפה, ואת המפה מציג למסך. במפה יש 3 סוגי אריחים
-https://github.com/Noa-Amit/game-task8-tilemap-pathfinding/blob/main/Assets/Scripts/randomMap/NewTilemapCaveGenerator.cs
-
-3. NewCaveGenerator-אוביקט שיוצר מפה רנדומלית חדשה. הקוד כתוב באופן כללי כך שמי שקורא לאוביקט מחליט מה יהיה מספר האריחים על המפה
-האוביקט מקבל מערך של מספרים שמייצגים את ההסתברות להופעת כל אריח על המפה ולפי הנתונים האלו מאתחל מפה
-https://github.com/Noa-Amit/game-task8-tilemap-pathfinding/blob/main/Assets/Scripts/randomMap/NewCaveGenerator.cs
+2. הוספתי פונקציה ל KeyboardMoverByTile שמחכה שניה ואז משנה את האריח של ה mountains לאריח של grass.
+3. בתוך ה KeyboardMoverByTile הוספתי לפונקציית update תנאי חדש שבודק קודם כל אם השחקן לחץ על X ואז על לחצן נוסף (ימינה, שמאלה, למטה, למעלה) ובנוסף בודק האם במיקום החדש אליו השחקן רוצה ללכת יש הר. אם כן, הוא נשלח לפונקציה שהוספתי וכתבתי בסעיף הקודם (2).
+https://github.com/Noa-Amit/Task8/blob/master/Assets/Scripts/2-player/KeyboardMoverByTile.cs
