@@ -1,20 +1,21 @@
-# Unity week 5: Two-dimensional scene-building and path-finding
+<div dir='rtl' lang='he'>
 
-A project with step-by-step scenes illustrating how to construct a 2D scene using tilemaps,
-and how to do path-finding using the BFS algorithm.
+# מטלה 8 סעיף ה
 
+לקחתי את הפרוייקט מהשיעור ועשיתי בו מספר שינויים:
+1. הוספתי פונקציה שבודקת האם השחקן לחץ על איקס ואם כן, על איזה לחצן נוסף הוא לחץ (ימינה, שמאלה,למעלמה,למטה) כך שהפונקציה מחזירה את המיקום החדש-
+https://github.com/Noa-Amit/Task8/blob/master/Assets/Scripts/2-player/KeyboardMover.cs
+2. הוספתי פונקציה שמחכה שניה ואז משנה את האריח של ה mountains לאריח של grass.
+3. הוספתי ל tilemap את הסקריפט החדש שכתבתי NewTilemapCaveGenerator
 
-## Credits
+הסקריפטים שכתבתי:
 
-Graphics:
-* [Ultima 4 Graphics](https://github.com/jahshuwaa/u4graphics) by Joshua Steele.
+1. NewMapTrigger- כשהשחקן נוגע בטריגר המשחק מתחיל מחדש, כלומר המפה משתנה והשחקן חוזר לנקודת ההתחלה
+https://github.com/Noa-Amit/game-task8-tilemap-pathfinding/blob/main/Assets/Scripts/randomMap/newMapTrigger.cs
 
-Online course:
-* [Unity 2D](https://www.udemy.com/course/unitycourse/learn/lecture/10246496), a Udemy course by Gamedev.tv.
-* [Unity RPG](https://www.gamedev.tv/p/unity-rpg/?product_id=1503859&coupon_code=JOINUS).
+2. NewTilemapCaveGeneration- יוצר אוביקט מערה שמתאחלת מפה, ואת המפה מציג למסך. במפה יש 3 סוגי אריחים
+https://github.com/Noa-Amit/game-task8-tilemap-pathfinding/blob/main/Assets/Scripts/randomMap/NewTilemapCaveGenerator.cs
 
-Procedural generation:
-* [Habrador - Unity Programming Patterns](https://github.com/Habrador/Unity-Programming-Patterns#7-double-buffer)
-
-Programming:
-* Erel Segal-Halevi
+3. NewCaveGenerator-אוביקט שיוצר מפה רנדומלית חדשה. הקוד כתוב באופן כללי כך שמי שקורא לאוביקט מחליט מה יהיה מספר האריחים על המפה
+האוביקט מקבל מערך של מספרים שמייצגים את ההסתברות להופעת כל אריח על המפה ולפי הנתונים האלו מאתחל מפה
+https://github.com/Noa-Amit/game-task8-tilemap-pathfinding/blob/main/Assets/Scripts/randomMap/NewCaveGenerator.cs
